@@ -709,7 +709,7 @@ end method;
 
 define method make-object
    (class :: subclass(<character>), bytes :: <byte-vector>, offset-objects :: <table>)
-=> (objects :: <integer>)
+=> (objects :: <character>)
    as(<character>, as(<integer>, machine-word(bytes, $payload-start)))
 end method;
 
