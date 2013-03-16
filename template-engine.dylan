@@ -97,8 +97,9 @@ define class <template> (<object>)
    constant slot operation-scopes
       = make(<deque>); /* of 'vocabulary-table-type' of <function> */
          
-   constant slot stringifier :: <function> = curry(format-to-string, "%s"),
-      init-keyword: #"stringifier";
+   constant slot stringifier :: <function>,
+      init-keyword: #"stringifier",
+      init-value: curry(format-to-string, "%s");
    constant slot sanitizer :: <function> = identity,
       init-keyword: #"sanitizer";
       
