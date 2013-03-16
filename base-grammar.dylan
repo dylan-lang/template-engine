@@ -280,7 +280,7 @@ define parser-method digit (stream, context)
    label "digit";
    let char = read-element(stream, on-end-of-stream: #f);
    case
-      char & char.digit? => char;
+      char & char.decimal-digit? => char;
       otherwise => #f;
    end case;
 end parser-method;
@@ -337,6 +337,7 @@ define method read-matching-string (stream, string :: <string>)
 => (str :: false-or(<string>))
    let in-str = read(stream, string.size, on-end-of-stream: #f);
    case
+      in-str = #f => #f;
       case-insensitive-equal?(in-str, string) => string;
       otherwise => #f;
    end case
@@ -347,4 +348,9 @@ define method check-name (name :: <string>, fail :: <function>) => ()
    unless (any?(alphabetic?, name))
       fail(make(<parse-failure>, expected: "alphabetic character in name"))
    end unless
+end method;
+
+
+define method as (class == <string>, char :: <character>) => (str :: <string>)
+   make(<string>, size: 1, fill: char)
 end method;
