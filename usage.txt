@@ -25,14 +25,14 @@ easily add vocabulary words.
 The program can specify which directives are recognized in the template document
 when it creates the '<template>' object. Briefly, the directives are:
 
-Template	- Changes the delimiters used to set off other directives.
-Case		- Selects which of several alternative sections to process.
-If		- Selects whether to process a section.
-Repeat		- Processes a section for each element of a collection.
-With		- Creates local variables or operations.
-Substitution	- Evaluates an expression and outputs it.
-Escape		- May be used to include delimiters in the output.
-Empty		- May be used for finer whitespace trim control.
+Template - Changes the delimiters used to set off other directives.
+Case     - Selects which of several alternative sections to process.
+If       - Selects whether to process a section.
+Repeat   - Processes a section for each element of a collection.
+With     - Creates local variables or operations.
+Substitution - Evaluates an expression and outputs it.
+Escape   - May be used to include delimiters in the output.
+Empty    - May be used for finer whitespace trim control.
 
 Expressions are comprised of literals, operators, and vocabulary words. They are
 much like Dylan expressions, but more limited. There is no support for function
@@ -213,13 +213,13 @@ these functions' vocabulary words.
 
 The 'INFO-NAME' functions are:
 
-first-rep?	- Returns #t if this iteration is for the first element in the
+first-rep?  - Returns #t if this iteration is for the first element in the
                   collection.
-last-rep?	- Returns #t if this iteration is for the last element in the
- 		  collection.
-rep-number	- The iteration number, starting from 1.
-rep-key		- The collection key of this element; for a sequence, this will
-		  be the iteration number except starting from 0.
+last-rep?   - Returns #t if this iteration is for the last element in the
+        collection.
+rep-number  - The iteration number, starting from 1.
+rep-key     - The collection key of this element; for a sequence, this will
+        be the iteration number except starting from 0.
 
 The program may disable this directive when creating the '<template>' object.
 

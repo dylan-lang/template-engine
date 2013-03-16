@@ -3,11 +3,12 @@ module: dylan-user
 define library template-engine
    use common-dylan;
    use collections;
+   use collection-extensions, import: { tables };
    use io;
    use peg-parser;
-   use string-extensions;
+   use strings;
    use sequence-stream;
-	use slot-visitor;
+   use slot-visitor;
 
    export template-engine;
 end library;
@@ -22,6 +23,8 @@ define module template-engine
    // from collections
    use table-extensions,
       rename: { case-insensitive-equal => case-insensitive-equal? };
+   // from collection-extensions
+   use tables, import: { <case-insensitive-string-table> };
    // from io
    use streams, exclude: { <string-stream> };
    use format;
@@ -31,10 +34,10 @@ define module template-engine
    use sequence-stream, import: { <string-stream> };
    // from peg-parser
    use peg-parser;
-   // from string-extensions
-   use character-type, rename: { digit? => decimal-digit? };
-	// from slot-visitor
-	use slot-visitor;
+   // from strings
+   use strings;
+   // from slot-visitor
+   use slot-visitor;
    
    export
       <template>, process-template, template-vocabulary, vocabulary-table-type;
