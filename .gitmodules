@@ -1,0 +1,12 @@
+[submodule "ext/peg-parser"]
+	path = ext/peg-parser
+	url = git://github.com/dylan-lang/peg-parser.git
+[submodule "ext/slot-visitor"]
+	path = ext/slot-visitor
+	url = git://github.com/dylan-lang/slot-visitor.git
+[submodule "ext/sequence-stream"]
+	path = ext/sequence-stream
+	url = git://github.com/dylan-lang/sequence-stream.git
+[submodule "ext/dynamic-binding"]
+	path = ext/dynamic-binding
+	url = git://github.com/dylan-lang/dynamic-binding.git

@@ -1,6 +1,6 @@
 library: template-engine
 target-type: dll
-files:   library-od
+files:   library
          template-engine
          storage
          base-grammar
