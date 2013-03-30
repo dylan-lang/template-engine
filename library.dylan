@@ -3,7 +3,6 @@ module: dylan-user
 define library template-engine
    use common-dylan;
    use collections;
-   use collection-extensions, import: { tables };
    use io;
    use peg-parser;
    use strings;
@@ -23,8 +22,6 @@ define module template-engine
    // from collections
    use table-extensions,
       rename: { case-insensitive-equal => case-insensitive-equal? };
-   // from collection-extensions
-   use tables, import: { <case-insensitive-string-table> };
    // from io
    use streams, exclude: { <string-stream> };
    use format;

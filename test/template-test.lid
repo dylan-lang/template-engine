@@ -1,4 +1,4 @@
 library: template-test
 executable: template-test
-files:   library-od
+files:   library
          main
