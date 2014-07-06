@@ -23,7 +23,7 @@ references.
 - A <character> payload is a <machine-word>.
 - An <integer> payload is a <machine-word>.
 - Other objects' payloads are a series of references, one for each slot.
-- The format version byte has this structure:
+- The format of the version byte has this structure:
    > [7   6   5   4   3   2   1   0]
    > [.....version.....   word-size]
 

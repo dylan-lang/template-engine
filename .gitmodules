@@ -1,6 +1,6 @@
 [submodule "ext/peg-parser"]
 	path = ext/peg-parser
-	url = git://github.com/dylan-lang/peg-parser.git
+url=git://github.com/BarAgent/peg-parser.git
 [submodule "ext/slot-visitor"]
 	path = ext/slot-visitor
 	url = git://github.com/dylan-lang/slot-visitor.git
