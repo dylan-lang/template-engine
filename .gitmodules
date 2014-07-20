@@ -7,6 +7,3 @@
 [submodule "ext/sequence-stream"]
 	path = ext/sequence-stream
 	url = git://github.com/dylan-lang/sequence-stream.git
-[submodule "ext/dynamic-binding"]
-	path = ext/dynamic-binding
-	url = git://github.com/dylan-lang/dynamic-binding.git
